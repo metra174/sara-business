@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { PRODUCTS } from '../constants';
 import { Product } from '../types';
 
@@ -7,6 +7,31 @@ interface ProductGridProps {
 }
 
 const ProductGrid: React.FC<ProductGridProps> = ({ onProductClick }) => {
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-y-10');
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    const cards = gridRef.current?.querySelectorAll('.product-card');
+    cards?.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="colecao" className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -16,11 +41,12 @@ const ProductGrid: React.FC<ProductGridProps> = ({ onProductClick }) => {
           <div className="w-24 h-1 bg-gold-400 mx-auto mt-6"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {PRODUCTS.map((product) => (
+        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {PRODUCTS.map((product, index) => (
             <div 
               key={product.id} 
-              className="group cursor-pointer"
+              className="product-card group cursor-pointer opacity-0 translate-y-10 transition-all duration-700 ease-out"
+              style={{ transitionDelay: `${index * 150}ms` }}
               onClick={() => onProductClick(product)}
             >
               <div className="relative overflow-hidden aspect-[3/4] mb-4 bg-gray-100">
