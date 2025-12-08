@@ -5,51 +5,67 @@ export const STORE_PHONE_NUMBER = "244955159730"; // Formato internacional para 
 export const PRODUCTS: Product[] = [
   {
     id: 1,
-    name: "Vestido Midi Elegance",
-    price: 45000,
-    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop",
-    category: "Vestidos",
-    colors: ["Preto", "Dourado", "Vermelho"]
+    name: "Pasta Executiva Charme",
+    price: 6000,
+    image: "https://i.imgur.com/GGk3XtL.jpg",
+    category: "Bolsas",
+    colors: ["Preto", "Bege", "Rosa", "Azul", "Vermelho"]
   },
   {
     id: 2,
-    name: "Blazer Alfaiataria Gold",
-    price: 65000,
-    image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=800&auto=format&fit=crop",
-    category: "Casacos",
-    colors: ["Preto", "Bege", "Branco"]
+    name: "Conjunto Alfaiataria Chic",
+    price: 10000,
+    image: "https://i.imgur.com/kEms9IP.jpg",
+    category: "Conjuntos",
+    colors: ["Preto", "Branco", "Verde", "Laranja", "Rosa"]
   },
   {
     id: 3,
-    name: "Conjunto Seda Premium",
-    price: 55000,
-    image: "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=800&auto=format&fit=crop",
-    category: "Conjuntos",
-    colors: ["Champagne", "Rose", "Preto"]
+    name: "Pasta Lady Luxo",
+    price: 8000,
+    image: "https://i.imgur.com/jsyx3NQ.jpg",
+    category: "Bolsas",
+    colors: ["Preto", "Castanho", "Creme"]
   },
   {
     id: 4,
-    name: "Saia Lápis Clássica",
-    price: 28000,
-    image: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?q=80&w=800&auto=format&fit=crop",
-    category: "Saias",
-    colors: ["Preto", "Azul Marinho"]
+    name: "Bolsa Tiracolo Style",
+    price: 6000,
+    image: "https://i.imgur.com/f6SlmAC.jpg",
+    category: "Bolsas",
+    colors: ["Preto", "Branco", "Bege"]
   },
   {
     id: 5,
-    name: "Camisa Social Seda",
-    price: 35000,
-    image: "https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?q=80&w=800&auto=format&fit=crop",
-    category: "Blusas",
-    colors: ["Branco", "Off-White", "Azul Claro"]
+    name: "Mochila Urbana",
+    price: 6000,
+    image: "https://i.imgur.com/uazyeaZ.jpg",
+    category: "Mochilas",
+    colors: ["Preto", "Cinza", "Rosa"]
   },
   {
     id: 6,
-    name: "Calça Pantalona Chic",
-    price: 42000,
-    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop",
-    category: "Calças",
-    colors: ["Preto", "Caramelo", "Verde Oliva"]
+    name: "Pasta Business",
+    price: 6000,
+    image: "https://i.imgur.com/JWYaSv5.jpg",
+    category: "Bolsas",
+    colors: ["Preto", "Vermelho", "Azul", "Bege"]
+  },
+  {
+    id: 7,
+    name: "Bolsa de Mão Clássica",
+    price: 6000,
+    image: "https://i.imgur.com/cnymT5X.jpg",
+    category: "Bolsas",
+    colors: ["Preto", "Branco", "Nude"]
+  },
+  {
+    id: 8,
+    name: "Bolsa Ombro Premium",
+    price: 8000,
+    image: "https://i.imgur.com/ZIHeu9O.jpg",
+    category: "Bolsas",
+    colors: ["Preto", "Castanho", "Vinho"]
   }
 ];
 

@@ -29,15 +29,17 @@ const Header: React.FC<HeaderProps> = ({ onCartClick, cartCount }) => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/95 py-4 shadow-lg' : 'bg-transparent py-6'
+        isScrolled ? 'bg-black/95 py-3 shadow-lg' : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <span className={`text-2xl font-serif font-bold tracking-widest ${isScrolled ? 'text-gold-400' : 'text-white'}`}>
-            SARA BUSINESS
-          </span>
+          <img 
+            src="https://i.imgur.com/p8eVZLG.png" 
+            alt="Sara Business" 
+            className="h-12 w-auto object-contain"
+          />
         </div>
 
         {/* Desktop Menu */}
