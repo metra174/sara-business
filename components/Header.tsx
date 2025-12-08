@@ -34,12 +34,15 @@ const Header: React.FC<HeaderProps> = ({ onCartClick, cartCount }) => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-3">
           <img 
             src="https://i.imgur.com/p8eVZLG.png" 
-            alt="Sara Business" 
-            className="h-12 w-auto object-contain"
+            alt="Sara Business Logo" 
+            className="h-10 md:h-12 w-auto object-contain"
           />
+          <span className="font-serif text-white font-bold tracking-widest text-lg md:text-xl uppercase">
+            Sara Business
+          </span>
         </div>
 
         {/* Desktop Menu */}

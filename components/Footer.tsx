@@ -9,11 +9,16 @@ const Footer: React.FC = () => {
           
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
-            <img 
-              src="https://i.imgur.com/p8eVZLG.png" 
-              alt="Sara Business" 
-              className="h-14 w-auto object-contain mb-6"
-            />
+            <div className="flex flex-col items-start mb-6">
+              <img 
+                src="https://i.imgur.com/p8eVZLG.png" 
+                alt="Sara Business Logo" 
+                className="h-14 w-auto object-contain mb-3"
+              />
+              <span className="font-serif text-white font-bold tracking-widest text-xl uppercase">
+                Sara Business
+              </span>
+            </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Moda feminina com elegância, sofisticação e estilo. 
               Transformando guarda-roupas e elevando a autoestima.
